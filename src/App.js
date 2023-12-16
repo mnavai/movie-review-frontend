@@ -1,5 +1,5 @@
 import './App.css';
-import api from './API/axiosConfiig';
+import api from './API/axiosConfig';
 import { useState, useEffect } from 'react';
 
 function App() {
