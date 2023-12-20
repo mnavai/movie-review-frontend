@@ -12,7 +12,7 @@ function App() {
     {
 
       const response = await api.get("/api/v1/movies");
-
+      console.log("response",response.data)
       setMovies(response.data);
 
     } 
