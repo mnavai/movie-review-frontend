@@ -8,18 +8,16 @@ function App() {
 
   const getMovies = async () => {
     try {
-
+      
       const response = await api.get('/api/v1/movies');
-      console.log("data",response.data);
+      console.log('Response Data:', response.data);
       setMovies(response.data);
-
-    } catch(err) {
-
-      console.log(err);
-
+    } catch (err) {
+      console.error('Error:', err);
     }
-  }
-
+  };
+  
+  
   useEffect(() => {
     getMovies();
   },[]);
