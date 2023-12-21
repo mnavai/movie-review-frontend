@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import Home from './components/home/Home';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/header/Header';
-import Trailer from './components/movietrailer/Trailer';
+import Trailer from './components/movieTrailer/Trailer';
 
 function App() {
 
