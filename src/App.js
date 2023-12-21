@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const [movies, setMovies] = useState();
+  const [movies, setMovies] = useState([]);
 
   const getMovies = async () =>{
     
@@ -33,7 +33,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Layout><Home/></Layout>} />
+        <Route path="/" element={<Layout/>}>
+          <Route path="/" element={<Home movies={movies} />} ></Route>
+        </Route>
       </Routes>
     </div>
   );
