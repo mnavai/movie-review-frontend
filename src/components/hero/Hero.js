@@ -6,30 +6,26 @@ import { Paper } from '@mui/material';
 const Hero = ({ movies }) => {
   return (
     <div className='movie-carousel-container'>
-        <Carousel>
-            {
-                movies?.map((movie) => {
-                    return(
-                        <Paper>
-                            <div className='movie-card-container'>
-                                <div className='movie-card' style={{"--img": `url(${movie.backdrops[0]})`}}>
-                                    <div className='movie-detail'>
-                                        <div className='movie-poster'>
-                                            <img src={movie.poster} alt='poster' />
-                                        </div>
-                                        <div className='movie-title'>
-                                            <h4>{movie.title}</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Paper>
-                    )
-                })
-            }
-        </Carousel>
+      <Carousel>
+        {movies?.map((movie) => (
+          <Paper key={movie.id}> {/* Add a unique key for each element */}
+            <div className='movie-card-container'>
+              <div className='movie-card' style={{"--img": `url(${movie.backdrops[0]})`}}>
+                <div className='movie-detail'>
+                  <div className='movie-poster'>
+                    <img src={movie.poster} alt='poster' />
+                  </div>
+                  <div className='movie-title'>
+                    <h4>{movie.title}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Paper>
+        ))}
+      </Carousel>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

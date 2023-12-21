@@ -7,11 +7,12 @@
     border: 1px solid gold;
     border-radius: 10px;
     overflow: hidden;
+    width: auto;
 }
 .movie-poster > img{
     height: 100%;
     width: 100%;
-
+    object-fit: cover;
 }
 .movie-card-container{
     height: 550px;
@@ -28,15 +29,15 @@
     position: absolute;
     top:200px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width:100%;
 }
 .movie-title{
     color:white;
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
-
 .movie-buttons-container{
     display:flex;
     justify-content: space-between;
