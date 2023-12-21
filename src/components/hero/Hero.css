@@ -36,7 +36,7 @@
     color:white;
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 .movie-buttons-container{
     display:flex;
@@ -49,6 +49,7 @@
     padding:0px;
     margin:0px;
     width:150px;
+    margin-left: 2rem;
 }
 .play-button-icon{
     padding:0px;
