@@ -37,10 +37,14 @@ function App() {
       const response = await api.get(`/api/v1/movies/${movieId}`)
       const singleMovie = response.data
       setMovie(singleMovie)
-      setRewiews(singleMovie.reviews)
+      if (Array.isArray(singleMovie.reviews)) {
+        setReviews(singleMovie.reviews);
+      } else {
+        setReviews([]); // Set to an empty array if reviews is not an array
+      }
 
     } catch(err) {
-
+      console.error(err);
     }
 
   }
